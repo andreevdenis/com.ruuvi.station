@@ -23,6 +23,6 @@ jobs:
         java-version: 1.8
         
     - name: Build all artifacts
-      run: ./gradlew build
+      run: ./gradlew assembleWithoutFileLogsRelease
       
     
