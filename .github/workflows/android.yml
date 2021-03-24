@@ -23,6 +23,12 @@ jobs:
         java-version: 1.8
         
     - name: Build all artifacts
-      run: ./gradlew assembleWithoutFileLogsRelease
+      run: ./gradlew bundleRelease
+      
+    - name: Upload
+      uses: actions/upload-artifact@v2.2.2
+      with:
+        name: appBundle
+        path: app/build/outputs/bundle/withoutFileLogsRelease/app-withoutFileLogs-release.aab
       
     
